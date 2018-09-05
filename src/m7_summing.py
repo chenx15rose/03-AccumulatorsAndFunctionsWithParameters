@@ -83,6 +83,20 @@ def run_test_sum_square_roots():
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
 
+    expected = 0.13416
+    answer = sum_square_roots(3)
+    print('Test 1 expected', expected)
+    print('        answer:', answer)
+
+    expected = 1.12415
+    answer = sum_square_roots(2)
+    print('Test 2 expected', expected)
+    print('        answer:', answer)
+
+    expected = 1.54030
+    answer = sum_square_roots(1)
+    print('Test 3 expected', expected)
+    print('        answer:', answer)
 
 def sum_square_roots(n):
     """
@@ -105,7 +119,9 @@ def sum_square_roots(n):
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    total = 0
+    for k in range(n):
+        
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
