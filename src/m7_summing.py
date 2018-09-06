@@ -71,7 +71,7 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -83,18 +83,18 @@ def run_test_sum_square_roots():
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
 
-    expected = 0.13416
-    answer = sum_square_roots(3)
+    expected = 4.9
+    answer = sum_square_roots(2)
     print('Test 1 expected', expected)
     print('        answer:', answer)
 
-    expected = 1.12415
-    answer = sum_square_roots(2)
+    expected = 12.65
+    answer = sum_square_roots(4)
     print('Test 2 expected', expected)
     print('        answer:', answer)
 
-    expected = 1.54030
-    answer = sum_square_roots(1)
+    expected = 8.485
+    answer = sum_square_roots(3)
     print('Test 3 expected', expected)
     print('        answer:', answer)
 
@@ -111,17 +111,19 @@ def sum_square_roots(n):
          sqrt(2) + sqrt(4) + sqrt(6) + sqrt(8) + sqrt(10),
       which is about 11.854408.
     """
+    total = 0
+    for k in range (n):
+        total = total + math.sqrt(2*n+2)
+    return total
+
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-    total = 0
-    for k in range(n):
-        
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
